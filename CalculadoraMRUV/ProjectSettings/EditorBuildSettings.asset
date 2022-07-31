@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Encuentro.unity
     guid: cd22be429b37fd64795b796999dd67ae
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 50648d91ef882f442a2dc859e2b955ed
   m_configObjects: {}

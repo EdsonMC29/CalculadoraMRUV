@@ -8,12 +8,6 @@ public class MenuManager : MonoBehaviour
     void Start() {
      
     }
-
-    void TaskOnClick()
-    {
-        //Output this to console when Button1 or Button3 is clicked
-        Debug.Log("You have clicked the button!");
-    }
     
     public void BotonAceleracion()
     {
@@ -33,6 +27,11 @@ public class MenuManager : MonoBehaviour
     public void BotonEncuentro()
     {
          SceneManager.LoadScene("Encuentro");
+    }
+
+    public void BotonMenu()
+    {
+         SceneManager.LoadScene("Menu");
     }
 
     public void BotonSalida()
