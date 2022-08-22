@@ -18,6 +18,7 @@ public class OperacionesTime : MonoBehaviour
     float velFin;
     float tiempo;
     float distancia;
+    public bool calculado = false;
 
     public void setVelocidadFinal()
     {  
@@ -65,7 +66,8 @@ public class OperacionesTime : MonoBehaviour
           else
           {
                tiempo = (2.0f*distancia)/(velIni + velFin);
-               t.SetText("Tiempo: "+ tiempo.ToString());
+               t.SetText("Tiempo: "+ tiempo.ToString() + "s");
+               calculado = true;
           } 
     }
 }

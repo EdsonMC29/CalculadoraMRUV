@@ -18,11 +18,14 @@ public class OperacionesDis : MonoBehaviour
     double distancia;
     double tiempo;
     double aceleracion;
+    public bool calculado = false;
 
     public void setVelocidadInicial()
     {  
           if(verificadorTipo(vi))
             velIni = double.Parse(vi.text);
+            else 
+               velIni = 0;
     }
 
     public void setTiempo()
@@ -62,7 +65,8 @@ public class OperacionesDis : MonoBehaviour
                distancia = velIni*tiempo + 0.5*aceleracion * Math.Pow(tiempo, 2);
                if(distancia < 0)
                     distancia =0;
-               d.SetText("Distancia: "+ distancia.ToString());
+               d.SetText("Distancia: "+ distancia.ToString() + "m");
+               calculado = true;
           }
      
     }

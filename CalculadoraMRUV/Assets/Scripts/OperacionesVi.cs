@@ -13,10 +13,11 @@ public class OperacionesVi : MonoBehaviour
 
     public GameObject errorAviso;
 
-    float velIni;
-    float velFin;
-    float tiempo;
-    float aceleracion;
+    public float velIni;
+    public float velFin;
+    public float tiempo;
+    public float aceleracion;
+    public bool calculado = false;
 
     public void setVelocidadFinal()
     {  
@@ -53,7 +54,7 @@ public class OperacionesVi : MonoBehaviour
 
     public void calcularVelocidadInicial()
     {
-          if(!float.TryParse(t.text, out velIni) ||!float.TryParse(a.text, out velIni) || !float.TryParse(vf.text, out velIni)){ 
+          if(!float.TryParse(vf.text, out velIni) ||!float.TryParse(t.text, out velIni) ||!float.TryParse(a.text, out velIni) || !float.TryParse(vf.text, out velIni)){ 
                errorAviso.SetActive(true); 
           }
           else
@@ -62,6 +63,7 @@ public class OperacionesVi : MonoBehaviour
                if(velIni <= 0)
                     velIni =0;
                vi.SetText("La Velocidad inicial es: "+ velIni.ToString());
+               calculado = true;
           }
      
     }

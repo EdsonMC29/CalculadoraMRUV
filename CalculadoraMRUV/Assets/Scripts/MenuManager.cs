@@ -37,7 +37,7 @@ public class MenuManager : MonoBehaviour
     public void BotonSalida()
     {
         print("Salimos de la Aplicacion");
-        //Aplicacion.Quit();
+        Application.Quit();
     }
 
    

@@ -60,7 +60,7 @@ public class Operaciones : MonoBehaviour
                velIni = velFin - aceleracion * tiempo;
                if(velIni < 0)
                     velIni =0;
-               vi.SetText("La Velocidad inicial es: "+ velIni.ToString());
+               vi.SetText("La Velocidad inicial es: "+ velIni.ToString() + "m/s²");
           }
      
     }

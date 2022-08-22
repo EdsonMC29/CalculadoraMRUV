@@ -17,6 +17,7 @@ public class OperacionVf : MonoBehaviour
     float velFin;
     float tiempo;
     float aceleracion;
+    public bool calculado = false;
 
     public void setVelocidadInicial()
     {  
@@ -34,7 +35,8 @@ public class OperacionVf : MonoBehaviour
     {  
          if(verificadorTipo(a))
            aceleracion = float.Parse(a.text);
-         
+         else
+           aceleracion = 9.8f;
     }
 
     private bool verificadorTipo(TMP_InputField x)
@@ -61,7 +63,8 @@ public class OperacionVf : MonoBehaviour
                velFin = velIni + aceleracion * tiempo;
                if(velFin < 0)
                     velFin = 0;
-               vf.SetText("La Velocidad Final es: "+ velFin.ToString());
+               vf.SetText("La Velocidad Final es: "+ velFin.ToString() + "m/s²");
+               calculado = true;
           }
      
     }
